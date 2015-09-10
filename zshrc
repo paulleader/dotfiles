@@ -97,5 +97,7 @@ _load_settings() {
 }
 _load_settings "$HOME/.zsh/configs"
 
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+
 # Local config
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local

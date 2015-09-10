@@ -73,15 +73,11 @@ if executable('ag')
   set grepprg=ag\ --nogroup\ --nocolor
 
   " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-  let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
+  let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g "" -v "^doc"'
 
   " ag is fast enough that CtrlP doesn't need to cache
   let g:ctrlp_use_caching = 0
 endif
-
-" Make it obvious where 80 characters is
-set textwidth=80
-set colorcolumn=+1
 
 " Numbers
 set number
@@ -118,6 +114,7 @@ nnoremap <Up> :echoe "Use k"<CR>
 nnoremap <Down> :echoe "Use j"<CR>
 
 " vim-rspec mappings
+let g:rspec_command = "!zeus rspec -fd {spec}"
 nnoremap <Leader>t :call RunCurrentSpecFile()<CR>
 nnoremap <Leader>s :call RunNearestSpec()<CR>
 nnoremap <Leader>l :call RunLastSpec()<CR>
@@ -153,6 +150,24 @@ set complete+=kspell
 
 " Always use vertical diffs
 set diffopt+=vertical
+
+" Relative line numbering
+set relativenumber
+
+" Colour scheme
+let g:molokai_original=0
+let g:rehash256 = 1
+colorscheme molokai
+
+" Ruby mode for .thor files
+au BufRead,BufNewFile *.thor set filetype=ruby
+
+" automatically rebalance windows on vim resize
+autocmd VimResized * :wincmd =
+
+" zoom a vim pane, <C-w>= to re-balance
+nnoremap <leader>- :wincmd _<cr>:wincmd \|<cr>
+nnoremap <leader>= :wincmd =<cr>
 
 " Local config
 if filereadable($HOME . "/.vimrc.local")

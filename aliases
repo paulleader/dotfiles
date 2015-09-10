@@ -1,19 +1,39 @@
 # Unix
 alias ll="ls -al"
 alias ln="ln -v"
+alias ltr="ls -ltr"
 alias mkdir="mkdir -p"
 alias e="$EDITOR"
 alias v="$VISUAL"
 
+alias grep="grep --color=auto -I"
+alias pbcopy="tr -d '\n' | pbcopy"
+alias top="top -o cpu"
+
+# Git
+
+# http://codeinthehole.com/writing/tips-for-using-a-git-pre-commit-hook/
+alias gc="git commit"
+alias gcnv="git commit --no-verify"
+
+alias gs="git status"
+alias gb="git branch"
+alias gbv="git branch -v"
+alias gd="git diff"
+alias gco="git checkout"
+
 # Bundler
 alias b="bundle"
-
-# Rails
-alias migrate="rake db:migrate db:rollback && rake db:migrate"
-alias s="rspec"
+alias be="bundle exec"
 
 # Pretty print the path
 alias path='echo $PATH | tr -s ":" "\n"'
+
+alias flushdns="sudo discoveryutil udnsflushcaches"
+
+# Rails
+
+alias rebuild_test_db="RAILS_ENV=test bundle exec rake db:drop db:create db:schema:load"
 
 # Include custom aliases
 [[ -f ~/.aliases.local ]] && source ~/.aliases.local

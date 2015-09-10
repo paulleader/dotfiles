@@ -44,6 +44,19 @@ Plug 'tpope/vim-surround'
 Plug 'vim-ruby/vim-ruby'
 Plug 'vim-scripts/tComment'
 
+Plug 'styrmis/molokai'
+
+Plug 'christoomey/vim-tmux-navigator'
+
+Plug 'scrooloose/nerdcommenter'
+Plug 'ervandew/supertab'
+Plug 'easymotion/vim-easymotion'
+Plug 'bronson/vim-trailing-whitespace'
+
+" Snippets
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+
 if filereadable(expand("~/.vimrc.bundles.local"))
   source ~/.vimrc.bundles.local
 endif

@@ -49,6 +49,7 @@ Plug 'styrmis/molokai'
 Plug 'christoomey/vim-tmux-navigator'
 
 Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdtree'
 Plug 'ervandew/supertab'
 Plug 'easymotion/vim-easymotion'
 Plug 'bronson/vim-trailing-whitespace'

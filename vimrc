@@ -79,6 +79,9 @@ if executable('ag')
   let g:ctrlp_use_caching = 0
 endif
 
+" Configure Ctrl-n to toggle NERDTree
+map <C-n> :NERDTreeToggle<CR>
+
 " Numbers
 set number
 set numberwidth=5

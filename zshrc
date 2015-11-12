@@ -99,5 +99,7 @@ _load_settings "$HOME/.zsh/configs"
 
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 
+eval "$(rbenv init -)"
+
 # Local config
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local

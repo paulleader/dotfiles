@@ -52,12 +52,18 @@ Plug 'scrooloose/nerdtree'
 Plug 'ervandew/supertab'
 Plug 'easymotion/vim-easymotion'
 Plug 'bronson/vim-trailing-whitespace'
+Plug 'bruno-/vim-ruby-fold'
 
 " Snippets
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 
+" Wakatime
 Plug 'wakatime/vim-wakatime'
+
+" Vim text objects for Ruby blocks
+Plug 'kana/vim-textobj-user'
+Plug 'nelstrom/vim-textobj-rubyblock'
 
 if filereadable(expand("~/.vimrc.bundles.local"))
   source ~/.vimrc.bundles.local

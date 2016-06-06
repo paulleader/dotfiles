@@ -117,10 +117,12 @@ nnoremap <Up> :echoe "Use k"<CR>
 nnoremap <Down> :echoe "Use j"<CR>
 
 " vim-rspec mappings
-let g:rspec_command = "!zeus rspec -fd {spec}"
+let g:rspec_command = 'call Send_to_Tmux("bundle exec rspec {spec}\n")'
+
 nnoremap <Leader>t :call RunCurrentSpecFile()<CR>
 nnoremap <Leader>s :call RunNearestSpec()<CR>
 nnoremap <Leader>l :call RunLastSpec()<CR>
+nnoremap <Leader>a :call RunAllSpecs()<CR>
 
 " Run commands that require an interactive shell
 nnoremap <Leader>r :RunInInteractiveShell<space>
@@ -162,8 +164,9 @@ let g:molokai_original=0
 let g:rehash256 = 1
 colorscheme molokai
 
-" Ruby mode for .thor files
+" Ruby mode for .thor and .etl files
 au BufRead,BufNewFile *.thor set filetype=ruby
+au BufNewFile,BufRead *.etl set filetype=ruby
 
 " automatically rebalance windows on vim resize
 autocmd VimResized * :wincmd =
@@ -171,6 +174,46 @@ autocmd VimResized * :wincmd =
 " zoom a vim pane, <C-w>= to re-balance
 nnoremap <leader>- :wincmd _<cr>:wincmd \|<cr>
 nnoremap <leader>= :wincmd =<cr>
+
+" jk in rapid succession will bring you out of insert mode
+inoremap jk <esc>
+inoremap kj <esc>
+
+cnoremap jk <c-c>
+cnoremap kj <c-c>
+
+vnoremap v <esc>
+
+" Swap numbers and symbols in insert mode (JP layout)
+inoremap 1 !
+inoremap 2 @
+inoremap 3 £
+inoremap 4 $
+inoremap 5 %
+inoremap 6 ^
+inoremap 7 &
+inoremap 8 *
+inoremap 9 (
+inoremap 0 )
+"inoremap - =
+"inoremap ^ ~
+
+" and then the opposite
+inoremap ! 1
+inoremap @ 2
+inoremap £ 3
+inoremap $ 4
+inoremap % 5
+inoremap ^ 6
+inoremap & 7
+inoremap * 8
+inoremap ( 9
+inoremap ) 0
+"inoremap = -
+"inoremap ~ ^
+
+" Quick save shortcut
+noremap <Leader>f :update<CR>
 
 " Local config
 if filereadable($HOME . "/.vimrc.local")

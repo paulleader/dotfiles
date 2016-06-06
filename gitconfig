@@ -1,6 +1,6 @@
 [user]
-  name = Stefan Magnuson
-  email = styrmis@gmail.com
+	name = Stefan Magnuson
+	email = styrmis@gmail.com
 [core]
   editor = /usr/bin/vim
 [init]
@@ -16,3 +16,7 @@
   st = status
 [include]
   path = ~/.gitconfig.local
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true

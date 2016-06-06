@@ -10,6 +10,9 @@ alias grep="grep --color=auto -I"
 alias pbcopy="tr -d '\n' | pbcopy"
 alias top="top -o cpu"
 
+# OSX version of htop currently requires sudo access
+alias htop="sudo htop --sort-key PERCENT_CPU"
+
 # Git
 
 # http://codeinthehole.com/writing/tips-for-using-a-git-pre-commit-hook/

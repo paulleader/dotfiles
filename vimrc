@@ -167,6 +167,7 @@ colorscheme molokai
 " Ruby mode for .thor and .etl files
 au BufRead,BufNewFile *.thor set filetype=ruby
 au BufNewFile,BufRead *.etl set filetype=ruby
+au BufNewFile,BufRead *.jbuilder set filetype=ruby
 
 " automatically rebalance windows on vim resize
 autocmd VimResized * :wincmd =
@@ -214,6 +215,10 @@ inoremap ) 0
 
 " Quick save shortcut
 noremap <Leader>f :update<CR>
+
+" Quick tab switching
+nnoremap H gT
+nnoremap L gt
 
 " Local config
 if filereadable($HOME . "/.vimrc.local")

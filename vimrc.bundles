@@ -57,6 +57,7 @@ Plug 'christoomey/vim-tmux-navigator'
 
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/syntastic'
 Plug 'ervandew/supertab'
 Plug 'easymotion/vim-easymotion'
 Plug 'bronson/vim-trailing-whitespace'

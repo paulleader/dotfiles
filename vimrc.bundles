@@ -43,6 +43,11 @@ Plug 'tpope/vim-surround'
 Plug 'vim-ruby/vim-ruby'
 Plug 'vim-scripts/tComment'
 
+Plug 'airblade/vim-gitgutter'
+
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
 " To get the 'yo' alias, which enables paste mode for one insert only
 Plug 'tpope/vim-unimpaired'
 

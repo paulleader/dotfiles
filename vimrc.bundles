@@ -43,6 +43,9 @@ Plug 'tpope/vim-surround'
 Plug 'vim-ruby/vim-ruby'
 Plug 'vim-scripts/tComment'
 
+" To get the 'yo' alias, which enables paste mode for one insert only
+Plug 'tpope/vim-unimpaired'
+
 Plug 'styrmis/molokai'
 
 Plug 'christoomey/vim-tmux-navigator'
@@ -56,6 +59,8 @@ Plug 'bronson/vim-trailing-whitespace'
 " Snippets
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
+
+Plug 'elixir-lang/vim-elixir'
 
 " Wakatime
 Plug 'wakatime/vim-wakatime'

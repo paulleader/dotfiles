@@ -124,6 +124,12 @@ nnoremap <Leader>s :call RunNearestSpec()<CR>
 nnoremap <Leader>l :call RunLastSpec()<CR>
 nnoremap <Leader>a :call RunAllSpecs()<CR>
 
+" By default assume that we want to target the current window in the current
+" session for tslime commands, like test runs
+
+let g:tslime_always_current_session=1
+let g:tslime_always_current_window=1
+
 " Run commands that require an interactive shell
 nnoremap <Leader>r :RunInInteractiveShell<space>
 

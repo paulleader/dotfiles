@@ -40,13 +40,17 @@ Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-dispatch'
 Plug 'vim-ruby/vim-ruby'
 Plug 'vim-scripts/tComment'
+Plug 'jiangmiao/auto-pairs' " Auto-complete closing brackets
 
 Plug 'airblade/vim-gitgutter'
 
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+" Disabling airline due to it possibly contributing to slow responsiveness
+" when editing Ruby files
+"Plug 'vim-airline/vim-airline'
+"Plug 'vim-airline/vim-airline-themes'
 
 " To get the 'yo' alias, which enables paste mode for one insert only
 Plug 'tpope/vim-unimpaired'
@@ -61,6 +65,8 @@ Plug 'scrooloose/syntastic'
 Plug 'ervandew/supertab'
 Plug 'easymotion/vim-easymotion'
 Plug 'bronson/vim-trailing-whitespace'
+
+Plug 'haya14busa/incsearch.vim'
 
 " Snippets
 Plug 'SirVer/ultisnips'

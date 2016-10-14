@@ -165,10 +165,20 @@ set diffopt+=vertical
 " Relative line numbering
 set relativenumber
 
+" Two settings to (potentially) aid in keeping the UI responsive, e.g. when
+" scrolling
+set ttyfast
+set lazyredraw
+
 " Colour scheme
 let g:molokai_original=0
 let g:rehash256 = 1
 colorscheme molokai
+
+" Highlight column 80
+
+highlight ColorColumn ctermbg=235 guibg=#2c2d27
+let &colorcolumn="80,80"
 
 " Ruby mode for .thor and .etl files
 au BufRead,BufNewFile *.thor set filetype=ruby
@@ -225,6 +235,10 @@ noremap <Leader>f :update<CR>
 " Quick tab switching
 nnoremap H gT
 nnoremap L gt
+
+map /  <Plug>(incsearch-forward)
+map ?  <Plug>(incsearch-backward)
+map g/ <Plug>(incsearch-stay)
 
 " Local config
 if filereadable($HOME . "/.vimrc.local")

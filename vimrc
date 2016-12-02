@@ -118,19 +118,21 @@ nnoremap <Right> :echoe "Use l"<CR>
 nnoremap <Up> :echoe "Use k"<CR>
 nnoremap <Down> :echoe "Use j"<CR>
 
-" vim-rspec mappings
-let g:rspec_command = 'call Send_to_Tmux("bundle exec rspec {spec}\n")'
+nmap <silent> <leader>s :TestNearest<CR>
+nmap <silent> <leader>t :TestFile<CR>
+" nmap <silent> <leader>a :TestSuite<CR>
+nmap <silent> <leader>l :TestLast<CR>
+nmap <silent> <leader>g :TestVisit<CR>
 
-nnoremap <Leader>t :call RunCurrentSpecFile()<CR>
-nnoremap <Leader>s :call RunNearestSpec()<CR>
-nnoremap <Leader>l :call RunLastSpec()<CR>
-nnoremap <Leader>a :call RunAllSpecs()<CR>
+let test#strategy = "tslime"
+let g:test#preserve_screen = 1
 
 " By default assume that we want to target the current window in the current
 " session for tslime commands, like test runs
 
 let g:tslime_always_current_session=1
 let g:tslime_always_current_window=1
+let g:tmux_panenumber=2
 
 " Run commands that require an interactive shell
 nnoremap <Leader>r :RunInInteractiveShell<space>

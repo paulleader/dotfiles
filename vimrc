@@ -205,34 +205,6 @@ cnoremap kj <c-c>
 
 vnoremap v <esc>
 
-" Swap numbers and symbols in insert mode (JP layout)
-inoremap 1 !
-inoremap 2 @
-inoremap 3 £
-inoremap 4 $
-inoremap 5 %
-inoremap 6 ^
-inoremap 7 &
-inoremap 8 *
-inoremap 9 (
-inoremap 0 )
-"inoremap - =
-"inoremap ^ ~
-
-" and then the opposite
-inoremap ! 1
-inoremap @ 2
-inoremap £ 3
-inoremap $ 4
-inoremap % 5
-inoremap ^ 6
-inoremap & 7
-inoremap * 8
-inoremap ( 9
-inoremap ) 0
-"inoremap = -
-"inoremap ~ ^
-
 " Quick save shortcut
 noremap <Leader>f :update<CR>
 

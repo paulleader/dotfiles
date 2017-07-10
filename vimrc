@@ -118,11 +118,10 @@ nnoremap <Right> :echoe "Use l"<CR>
 nnoremap <Up> :echoe "Use k"<CR>
 nnoremap <Down> :echoe "Use j"<CR>
 
-nmap <silent> <leader>s :TestNearest<CR>
-nmap <silent> <leader>t :TestFile<CR>
-" nmap <silent> <leader>a :TestSuite<CR>
-nmap <silent> <leader>l :TestLast<CR>
-nmap <silent> <leader>g :TestVisit<CR>
+autocmd FileType ruby map <silent> <leader>s :TestNearest<CR>
+autocmd FileType ruby map <silent> <leader>t :TestFile<CR>
+autocmd FileType ruby map <silent> <leader>l :TestLast<CR>
+autocmd FileType ruby map <silent> <leader>g :TestVisit<CR>
 
 let test#strategy = "tslime"
 let g:test#preserve_screen = 1

@@ -20,10 +20,17 @@ alias gc="git commit"
 alias gcnv="git commit --no-verify"
 
 alias gs="git status"
-alias gb="git branch"
-alias gbv="git branch -v"
+alias gb="git branch -vv --sort=committerdate"
+alias gbd="git branch -d"
 alias gd="git diff"
 alias gco="git checkout"
+
+alias gfp="git fetch -p"
+alias gp="git pull"
+
+alias ggone="git branch -vv | grep ': gone' | cut -c 3- | awk '{ print \$1 }'"
+
+alias grc="git rebase --continue"
 
 # Bundler
 alias b="bundle"

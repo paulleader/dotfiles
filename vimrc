@@ -271,6 +271,9 @@ nmap [h <Plug>GitGutterPrevHunk
 
 let g:gitgutter_updatetime = 250
 
+" taskwiki configuration
+let g:taskwiki_sort_orders={"D": "description+"}
+
 " Local config
 if filereadable($HOME . "/.vimrc.local")
   source ~/.vimrc.local

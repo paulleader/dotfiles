@@ -45,5 +45,8 @@ alias flushdns="sudo discoveryutil udnsflushcaches"
 
 alias rebuild_test_db="RAILS_ENV=test bundle exec rake db:drop db:create db:schema:load"
 
+# Take a screenshot directly from a running iOS simulator
+alias take_simulator_screenshot="xcrun simctl io booted screenshot"
+
 # Include custom aliases
 [[ -f ~/.aliases.local ]] && source ~/.aliases.local

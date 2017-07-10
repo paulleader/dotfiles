@@ -253,6 +253,18 @@ nmap ga <Plug>(EasyAlign)
 " Toggle hard mode
 nnoremap <leader>h <Esc>:call ToggleHardMode()<CR>
 
+" Set up Seeeing is Believing
+let g:xmpfilter_cmd = "seeing_is_believing"
+
+autocmd FileType ruby nmap <buffer> <leader>m <Plug>(seeing_is_believing-mark)
+autocmd FileType ruby xmap <buffer> <leader>m <Plug>(seeing_is_believing-mark)
+
+autocmd FileType ruby nmap <buffer> <leader>c <Plug>(seeing_is_believing-clean)
+autocmd FileType ruby xmap <buffer> <leader>c <Plug>(seeing_is_believing-clean)
+
+autocmd FileType ruby nmap <buffer> <leader>r <Plug>(seeing_is_believing-run)
+autocmd FileType ruby xmap <buffer> <leader>r <Plug>(seeing_is_believing-run)
+
 " Local config
 if filereadable($HOME . "/.vimrc.local")
   source ~/.vimrc.local

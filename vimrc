@@ -123,6 +123,11 @@ autocmd FileType ruby map <silent> <leader>t :TestFile<CR>
 autocmd FileType ruby map <silent> <leader>l :TestLast<CR>
 autocmd FileType ruby map <silent> <leader>g :TestVisit<CR>
 
+autocmd FileType python map <silent> <leader>s :TestNearest<CR>
+autocmd FileType python map <silent> <leader>t :TestFile<CR>
+autocmd FileType python map <silent> <leader>l :TestLast<CR>
+autocmd FileType python map <silent> <leader>g :TestVisit<CR>
+
 let test#strategy = "tslime"
 let g:test#preserve_screen = 1
 

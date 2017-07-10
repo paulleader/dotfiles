@@ -79,6 +79,9 @@ if executable('ag')
 
   " ag is fast enough that CtrlP doesn't need to cache
   let g:ctrlp_use_caching = 0
+
+  " Also set up ag for Ack.vim
+  let g:ackprg = "ag --vimgrep"
 endif
 
 " Configure Ctrl-n to toggle NERDTree

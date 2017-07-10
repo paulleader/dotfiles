@@ -247,6 +247,12 @@ xmap ga <Plug>(EasyAlign)
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
 
+" Start in hard mode by default
+" autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
+
+" Toggle hard mode
+nnoremap <leader>h <Esc>:call ToggleHardMode()<CR>
+
 " Local config
 if filereadable($HOME . "/.vimrc.local")
   source ~/.vimrc.local

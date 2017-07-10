@@ -265,6 +265,12 @@ autocmd FileType ruby xmap <buffer> <leader>c <Plug>(seeing_is_believing-clean)
 autocmd FileType ruby nmap <buffer> <leader>r <Plug>(seeing_is_believing-run)
 autocmd FileType ruby xmap <buffer> <leader>r <Plug>(seeing_is_believing-run)
 
+" Configure custom shortcuts for moving between git hunks
+nmap ]h <Plug>GitGutterNextHunk
+nmap [h <Plug>GitGutterPrevHunk
+
+let g:gitgutter_updatetime = 250
+
 " Local config
 if filereadable($HOME . "/.vimrc.local")
   source ~/.vimrc.local

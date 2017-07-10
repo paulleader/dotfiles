@@ -133,6 +133,12 @@ let g:test#preserve_screen = 1
 
 let test#ruby#rspec#executable = 'bundle exec spring rspec'
 
+let test#ruby#rspec#options = {
+  \ 'nearest': '--fail-fast',
+  \ 'file':    '--fail-fast',
+  \ 'suite':   '--fail-fast',
+\}
+
 " By default assume that we want to target the current window in the current
 " session for tslime commands, like test runs
 

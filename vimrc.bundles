@@ -27,25 +27,49 @@ com! -nargs=+  -bar Bundle call VundleToPlug("Bundle", <args>)
 call plug#begin('~/.vim/bundle')
 
 " Define bundles via Github repos
-Plug 'christoomey/vim-run-interactive'
+"Plug 'christoomey/vim-run-interactive'
 Plug 'kchmck/vim-coffee-script'
 Plug 'ctrlpvim/ctrlp.vim'
+
+" Create directories as necessary when editing a new file
 Plug 'pbrisbin/vim-mkdir'
+
 Plug 'jgdavey/tslime.vim'
 Plug 'janko-m/vim-test'
 
 Plug 'tpope/vim-bundler'
+
+" Automatically add 'end' when opening a Ruby method/class
 Plug 'tpope/vim-endwise'
+
+" Common UNIX commands such as :Mkdir
 Plug 'tpope/vim-eunuch'
+
+Plug 'sjl/gundo.vim'
+
 Plug 'tpope/vim-fugitive'
+
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
+
+Plug 'tpope/vim-bundler'
+Plug 'tpope/vim-rake'
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-haml'
+
 Plug 'tpope/vim-dispatch'
 Plug 'vim-ruby/vim-ruby'
 Plug 'vim-scripts/tComment'
+
 Plug 'jiangmiao/auto-pairs' " Auto-complete closing brackets
 
 Plug 'airblade/vim-gitgutter'
+
+Plug 'vimwiki/vimwiki', { 'branch': 'dev' }
+Plug 'blindFS/vim-taskwarrior'
+Plug 'tbabej/taskwiki'
+
+Plug 'junegunn/vim-easy-align'
 
 " Disabling airline due to it possibly contributing to slow responsiveness
 " when editing Ruby files
@@ -58,15 +82,19 @@ Plug 'tpope/vim-unimpaired'
 Plug 'styrmis/molokai'
 
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'benmills/vimux'
 
 Plug 'scrooloose/nerdcommenter'
-Plug 'scrooloose/nerdtree'
+"Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/syntastic'
 Plug 'ervandew/supertab'
 Plug 'easymotion/vim-easymotion'
 Plug 'bronson/vim-trailing-whitespace'
 
 Plug 'haya14busa/incsearch.vim'
+Plug 'vim-scripts/greplace.vim'
+
+Plug 'mileszs/ack.vim'
 
 " Snippets
 Plug 'SirVer/ultisnips'
@@ -80,6 +108,12 @@ Plug 'wakatime/vim-wakatime'
 " Vim text objects for Ruby blocks
 Plug 'kana/vim-textobj-user'
 Plug 'nelstrom/vim-textobj-rubyblock'
+
+Plug 'jgb/django.vim'
+
+Plug 'wikitopian/hardmode'
+
+Plug 't9md/vim-ruby-xmpfilter'
 
 if filereadable(expand("~/.vimrc.bundles.local"))
   source ~/.vimrc.bundles.local

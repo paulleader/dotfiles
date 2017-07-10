@@ -2,7 +2,9 @@
 	name = Stefan Magnuson
 	email = styrmis@gmail.com
 [core]
-  editor = /usr/bin/vim
+	editor = /usr/local/bin/vim
+	excludesfile = ~/.gitignore
+  pager = /usr/local/share/git-core/contrib/diff-highlight/diff-highlight | less
 [init]
   templatedir = ~/.git_template
 [push]
@@ -14,9 +16,13 @@
   ci = commit -v
   co = checkout
   st = status
+	ctags = !.git/hooks/ctags
 [include]
   path = ~/.gitconfig.local
 [filter "lfs"]
-	clean = git-lfs clean %f
-	smudge = git-lfs smudge %f
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
 	required = true
+[commit]
+	verbose = true

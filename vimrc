@@ -131,6 +131,8 @@ autocmd FileType python map <silent> <leader>g :TestVisit<CR>
 let test#strategy = "tslime"
 let g:test#preserve_screen = 1
 
+let test#ruby#rspec#executable = 'bundle exec spring rspec'
+
 " By default assume that we want to target the current window in the current
 " session for tslime commands, like test runs
 

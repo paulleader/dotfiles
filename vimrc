@@ -204,6 +204,7 @@ let &colorcolumn="80,80"
 au BufRead,BufNewFile *.thor set filetype=ruby
 au BufNewFile,BufRead *.etl set filetype=ruby
 au BufNewFile,BufRead *.jbuilder set filetype=ruby
+au BufNewFile,BufRead *.axlsx set filetype=ruby
 
 " automatically rebalance windows on vim resize
 autocmd VimResized * :wincmd =

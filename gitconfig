@@ -16,6 +16,7 @@
   ci = commit -v
   co = checkout
   st = status
+  po = "!git push -u origin \"$(git rev-parse --abbrev-ref HEAD)\""
 	ctags = !.git/hooks/ctags
 [include]
   path = ~/.gitconfig.local

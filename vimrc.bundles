@@ -94,6 +94,8 @@ Plug 'bronson/vim-trailing-whitespace'
 Plug 'haya14busa/incsearch.vim'
 Plug 'vim-scripts/greplace.vim'
 
+Plug 'machakann/vim-highlightedyank'
+
 Plug 'mileszs/ack.vim'
 
 " Snippets

@@ -274,6 +274,8 @@ nmap [h <Plug>GitGutterPrevHunk
 
 let g:gitgutter_updatetime = 250
 
+map y <Plug>(highlightedyank)
+
 " taskwiki configuration
 let g:taskwiki_sort_orders={"D": "description+"}
 

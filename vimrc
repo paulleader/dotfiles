@@ -134,7 +134,7 @@ autocmd FileType python map <silent> <leader>g :TestVisit<CR>
 let test#strategy = "tslime"
 let g:test#preserve_screen = 1
 
-let test#ruby#rspec#executable = 'bundle exec spring rspec'
+let test#ruby#rspec#executable = 'bundle exec spring rspec || bundle exec rspec'
 
 let test#ruby#rspec#options = {
   \ 'nearest': '--fail-fast',

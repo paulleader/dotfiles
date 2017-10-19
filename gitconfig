@@ -1,6 +1,3 @@
-[user]
-	name = Stefan Magnuson
-	email = styrmis@gmail.com
 [core]
 	editor = /usr/local/bin/vim
 	excludesfile = ~/.gitignore

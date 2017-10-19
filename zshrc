@@ -11,6 +11,8 @@ export PS1='${SSH_CONNECTION+"%{$fg_bold[green]%}%n@%m:"}%{$fg_bold[blue]%}%c%{$
 # load our own completion functions
 fpath=(~/.zsh/completion /usr/local/share/zsh/site-functions $fpath)
 
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 # completion
 autoload -U compinit
 compinit

@@ -106,6 +106,9 @@ Plug 'honza/vim-snippets'
 
 Plug 'elixir-lang/vim-elixir'
 
+Plug 'vim-scripts/indentpython.vim'
+Plug 'nvie/vim-flake8'
+
 " Vim text objects for Ruby blocks
 Plug 'kana/vim-textobj-user'
 Plug 'nelstrom/vim-textobj-rubyblock'

@@ -106,9 +106,6 @@ Plug 'honza/vim-snippets'
 
 Plug 'elixir-lang/vim-elixir'
 
-" Wakatime
-Plug 'wakatime/vim-wakatime'
-
 " Vim text objects for Ruby blocks
 Plug 'kana/vim-textobj-user'
 Plug 'nelstrom/vim-textobj-rubyblock'

@@ -57,6 +57,8 @@ Plug 'tpope/vim-rake'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-haml'
 
+Plug 'mattn/emmet-vim'
+
 Plug 'tpope/vim-dispatch'
 Plug 'vim-ruby/vim-ruby'
 Plug 'vim-scripts/tComment'

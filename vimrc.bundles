@@ -57,6 +57,8 @@ Plug 'tpope/vim-rake'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-haml'
 
+Plug 'mattn/emmet-vim'
+
 Plug 'tpope/vim-dispatch'
 Plug 'vim-ruby/vim-ruby'
 Plug 'ecomba/vim-ruby-refactoring'
@@ -104,9 +106,6 @@ Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 
 Plug 'elixir-lang/vim-elixir'
-
-" Wakatime
-Plug 'wakatime/vim-wakatime'
 
 " Vim text objects for Ruby blocks
 Plug 'kana/vim-textobj-user'

@@ -59,6 +59,7 @@ Plug 'tpope/vim-haml'
 
 Plug 'tpope/vim-dispatch'
 Plug 'vim-ruby/vim-ruby'
+Plug 'ecomba/vim-ruby-refactoring'
 Plug 'vim-scripts/tComment'
 
 Plug 'jiangmiao/auto-pairs' " Auto-complete closing brackets

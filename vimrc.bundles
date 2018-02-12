@@ -112,8 +112,6 @@ Plug 'wakatime/vim-wakatime'
 Plug 'kana/vim-textobj-user'
 Plug 'nelstrom/vim-textobj-rubyblock'
 
-Plug 'jgb/django.vim'
-
 Plug 'wikitopian/hardmode'
 
 Plug 't9md/vim-ruby-xmpfilter'

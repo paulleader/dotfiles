@@ -50,6 +50,11 @@ bindkey -v
 bindkey "^F" vi-cmd-mode
 bindkey jj vi-cmd-mode
 
+# Edit the current command with Esc v
+autoload -U edit-command-line
+zle -N edit-command-line
+bindkey '\C-x\C-e' edit-command-line
+
 # handy keybindings
 bindkey "^A" beginning-of-line
 bindkey "^E" end-of-line

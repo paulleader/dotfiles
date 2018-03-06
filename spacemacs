@@ -304,6 +304,9 @@ executes.
  This function is mostly useful for variables that need to be set
 before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
+
+  ;; Allow right alt/option to be used to type # (alt-3)
+  (setq-default mac-right-option-modifier nil)
   )
 
 (defun dotspacemacs/user-config ()

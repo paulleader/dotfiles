@@ -344,6 +344,8 @@ If FILEXT is provided, return files with extension FILEXT instead."
   ;; From http://blog.hourglasslab.com/2016/10/19/how%20do%20i%20organize%20my%20tasks%20and%20notes/
   (setq org-agenda-files
         (append (sa-find-org-file-recursively "~/Dropbox/org/" "org")))
+
+  (setq evil-vsplit-window-right t)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will

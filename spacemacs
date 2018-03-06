@@ -346,6 +346,11 @@ If FILEXT is provided, return files with extension FILEXT instead."
         (append (sa-find-org-file-recursively "~/Dropbox/org/" "org")))
 
   (setq evil-vsplit-window-right t)
+
+  ;; Suggest to org-agenda that it should generally open in a vertical split
+  (defadvice org-agenda (around split-vertically activate)
+    (let ((split-width-threshold 0))
+      ad-do-it))
   )
 
 ;; Do not write anything past this comment. This is where Emacs will

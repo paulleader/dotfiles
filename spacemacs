@@ -307,6 +307,9 @@ before packages are loaded. If you are unsure, you should try in setting them in
 
   ;; Allow right alt/option to be used to type # (alt-3)
   (setq-default mac-right-option-modifier nil)
+
+  ;; https://github.com/nashamri/spacemacs-theme/issues/62
+  (setq spacemacs-theme-org-agenda-height nil)
   )
 
 (defun dotspacemacs/user-config ()

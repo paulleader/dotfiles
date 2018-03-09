@@ -349,9 +349,15 @@ If FILEXT is provided, return files with extension FILEXT instead."
         (append (sa-find-org-file-recursively "~/Dropbox/org/" "org")))
 
   (setq org-agenda-custom-commands
-        '(("w" "Work"
-           ((agenda "")
-            (tags-todo "PAUL")))))
+        '(
+          ("w" "Work"
+           (
+            (agenda "" ((org-agenda-skip-function
+                         '(org-agenda-skip-entry-if 'regexp ":PAUL:"))))
+            (tags-todo "PAUL"))
+           )
+          )
+        )
 
   (setq evil-vsplit-window-right t)
 

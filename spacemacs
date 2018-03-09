@@ -348,6 +348,11 @@ If FILEXT is provided, return files with extension FILEXT instead."
   (setq org-agenda-files
         (append (sa-find-org-file-recursively "~/Dropbox/org/" "org")))
 
+  (setq org-agenda-custom-commands
+        '(("w" "Work"
+           ((agenda "")
+            (tags-todo "PAUL")))))
+
   (setq evil-vsplit-window-right t)
 
   ;; Suggest to org-agenda that it should generally open in a vertical split

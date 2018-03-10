@@ -355,6 +355,8 @@ If FILEXT is provided, return files with extension FILEXT instead."
           ("h" "Home"
            ((agenda "")))))
 
+  (setq org-agenda-include-diary nil)
+
   (setq evil-vsplit-window-right t)
 
   ;; Suggest to org-agenda that it should generally open in a vertical split

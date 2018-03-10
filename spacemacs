@@ -349,15 +349,11 @@ If FILEXT is provided, return files with extension FILEXT instead."
         (append (sa-find-org-file-recursively "~/Dropbox/org/" "org")))
 
   (setq org-agenda-custom-commands
-        '(
-          ("w" "Work"
-           (
-            (agenda "" ((org-agenda-skip-function
-                         '(org-agenda-skip-entry-if 'regexp ":PAUL:"))))
-            (tags-todo "PAUL"))
-           )
-          )
-        )
+        '(("w" "Work"
+           ((agenda "" ((org-agenda-skip-function '(org-agenda-skip-entry-if 'regexp ":PAUL:"))))
+            (tags-todo "PAUL")))
+          ("h" "Home"
+           ((agenda "")))))
 
   (setq evil-vsplit-window-right t)
 
@@ -376,7 +372,7 @@ If FILEXT is provided, return files with extension FILEXT instead."
  ;; If there is more than one, they won't work right.
  '(org-modules
    (quote
-    (org-bbdb org-bibtex org-docview org-gnus org-habit org-info org-irc org-mhe org-rmail org-w3m)))
+    (org-bbdb org-bibtex org-docview org-gnus org-habit org-info org-irc org-mhe org-rmail org-w3m org-mac-iCal)))
  '(org-outline-path-complete-in-steps nil)
  '(org-refile-allow-creating-parent-nodes (quote confirm))
  '(org-refile-targets (quote ((org-agenda-files :maxlevel . 3))))

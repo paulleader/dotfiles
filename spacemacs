@@ -355,7 +355,9 @@ If FILEXT is provided, return files with extension FILEXT instead."
             (todo "WAIT"))
            ((org-agenda-tag-filter-preset '("+MA"))))
           ("h" "Home"
-           ((agenda ""))
+           ((agenda "")
+           (tags-todo "TOM")
+           (tags-todo "KERR"))
            ((org-agenda-tag-filter-preset '("-MA"))))))
 
   (setq org-agenda-include-diary nil)

@@ -351,9 +351,12 @@ If FILEXT is provided, return files with extension FILEXT instead."
   (setq org-agenda-custom-commands
         '(("w" "Work"
            ((agenda "" ((org-agenda-skip-function '(org-agenda-skip-entry-if 'regexp ":PAUL:"))))
-            (tags-todo "PAUL")))
+            (tags-todo "PAUL")
+            (todo "WAIT"))
+           ((org-agenda-tag-filter-preset '("+MA"))))
           ("h" "Home"
-           ((agenda "")))))
+           ((agenda ""))
+           ((org-agenda-tag-filter-preset '("-MA"))))))
 
   (setq org-agenda-include-diary nil)
 

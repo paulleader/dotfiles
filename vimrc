@@ -190,6 +190,17 @@ let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
 let g:syntastic_eruby_ruby_quiet_messages =
     \ {"regex": "possibly useless use of a variable in void context"}
 
+" vim-ruby customisation
+
+" Enable folding, but for def/end only
+let ruby_fold = 1
+let ruby_foldable_groups = 'def'
+
+" Highlight Ruby operators
+let ruby_operators = 1
+
+let ruby_indent_block_style = 'do'
+
 " Set spellfile to location that is guaranteed to exist, can be symlinked to
 " Dropbox or kept in Git and managed outside of thoughtbot/dotfiles using rcm.
 set spellfile=$HOME/.vim-spell-en.utf-8.add

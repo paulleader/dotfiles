@@ -201,6 +201,12 @@ let ruby_operators = 1
 
 let ruby_indent_block_style = 'do'
 
+" vim-fold-rspec customisation
+
+let g:fold_rspec_foldlevel = 3       " sets initial open/closed state of all folds (open unless nested more than two levels deep)
+let g:fold_rspec_foldcolumn = 4      " shows a 4-character column on the lefthand side of the window displaying the document's fold structure
+let g:fold_rspec_foldminlines = 3    " disables closing of folds containing two lines or fewer
+
 " Set spellfile to location that is guaranteed to exist, can be symlinked to
 " Dropbox or kept in Git and managed outside of thoughtbot/dotfiles using rcm.
 set spellfile=$HOME/.vim-spell-en.utf-8.add

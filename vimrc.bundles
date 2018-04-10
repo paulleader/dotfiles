@@ -61,6 +61,7 @@ Plug 'mattn/emmet-vim'
 
 Plug 'tpope/vim-dispatch'
 Plug 'vim-ruby/vim-ruby'
+Plug 'rlue/vim-fold-rspec'
 Plug 'ecomba/vim-ruby-refactoring'
 Plug 'vim-scripts/tComment'
 

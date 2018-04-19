@@ -214,9 +214,6 @@ set complete+=kspell
 " Always use vertical diffs
 set diffopt+=vertical
 
-" Relative line numbering
-set relativenumber
-
 " Two settings to (potentially) aid in keeping the UI responsive, e.g. when
 " scrolling
 set ttyfast

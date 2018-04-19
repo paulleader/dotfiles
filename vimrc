@@ -192,9 +192,6 @@ let g:syntastic_eruby_ruby_quiet_messages =
 
 " vim-ruby customisation
 
-" Enable folding, but for def/end only
-let ruby_fold = 1
-let ruby_foldable_groups = 'def'
 
 " Highlight Ruby operators
 let ruby_operators = 1

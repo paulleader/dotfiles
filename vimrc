@@ -296,7 +296,7 @@ autocmd FileType ruby xmap <buffer> <leader>r <Plug>(seeing_is_believing-run)
 nmap ]h <Plug>GitGutterNextHunk
 nmap [h <Plug>GitGutterPrevHunk
 
-let g:gitgutter_updatetime = 250
+set updatetime=100
 
 map y <Plug>(highlightedyank)
 

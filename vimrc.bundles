@@ -103,10 +103,6 @@ Plug 'machakann/vim-highlightedyank'
 
 Plug 'mileszs/ack.vim'
 
-" Snippets
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
-
 Plug 'elixir-lang/vim-elixir'
 
 Plug 'vim-scripts/indentpython.vim'

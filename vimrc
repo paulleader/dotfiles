@@ -152,8 +152,8 @@ let test#strategy = "tslime"
 let g:test#preserve_screen = 1
 
 let test#ruby#rspec#options = {
-  \ 'nearest': '--fail-fast',
-  \ 'file':    '--fail-fast',
+  \ 'nearest': '',
+  \ 'file':    '',
   \ 'suite':   '--fail-fast',
 \}
 

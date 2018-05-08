@@ -111,5 +111,12 @@ eval "$(rbenv init -)"
 
 eval "$(pyenv init -)"
 
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
+autoload -U add-zsh-hook
+add-zsh-hook chpwd load-nvmrc
+load-nvmrc
+
 # Local config
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local

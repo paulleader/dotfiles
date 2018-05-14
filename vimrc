@@ -69,6 +69,10 @@ set expandtab
 " Display extra whitespace
 set list listchars=tab:»·,trail:·,nbsp:·
 
+" Shortcut to refer to the directory of the current file
+" From https://www.destroyallsoftware.com/file-navigation-in-vim.html
+cnoremap %% <C-R>=expand('%:h').'/'<cr>
+
 " Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
 if executable('ag')
   " Use Ag over Grep

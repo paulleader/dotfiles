@@ -168,17 +168,6 @@ let g:tslime_always_current_session=1
 let g:tslime_always_current_window=1
 let g:tmux_panenumber=2
 
-function! DockerComposeTransform(cmd) abort
-  if filereadable('docker-compose.yml')
-    return 'docker-compose exec web ' . a:cmd
-  endif
-
-  return a:cmd
-endfunction
-
-let g:test#custom_transformations = {'docker-compose': function('DockerComposeTransform')}
-let g:test#transformation = 'docker-compose'
-
 " Prompt for a command to run
 map <Leader>vp :VimuxPromptCommand<CR>
 

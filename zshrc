@@ -106,6 +106,10 @@ _load_settings "$HOME/.zsh/configs"
 
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 
+# Added primarily for fastlane (https://fastlane.tools/)
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+
 export PATH="$HOME/.rbenv/bin:/usr/local/bin:$PATH"
 eval "$(rbenv init -)"
 

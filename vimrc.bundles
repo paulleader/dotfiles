@@ -62,7 +62,6 @@ Plug 'mattn/emmet-vim'
 Plug 'tpope/vim-dispatch'
 Plug 'vim-ruby/vim-ruby'
 Plug 'mrkn/vim-cruby'
-Plug 'ecomba/vim-ruby-refactoring'
 Plug 'vim-scripts/tComment'
 
 Plug 'airblade/vim-gitgutter'

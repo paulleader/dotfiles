@@ -318,15 +318,6 @@ endfunction
 :command! PromoteToLet :call PromoteToLet()
 :map <leader>p :PromoteToLet<cr><Paste>
 
-" Use Leader-j/k to move lines down/up
-" Works with blocks in visual mode too
-nnoremap <Leader>j :m .+1<CR>==
-nnoremap <Leader>k :m .-2<CR>==
-inoremap <Leader>j <Esc>:m .+1<CR>==gi
-inoremap <Leader>k <Esc>:m .-2<CR>==gi
-vnoremap <Leader>j :m '>+1<CR>gv=gv
-vnoremap <Leader>k :m '<-2<CR>gv=gv
-
 " Configure custom shortcuts for moving between git hunks
 nmap ]h <Plug>GitGutterNextHunk
 nmap [h <Plug>GitGutterPrevHunk

@@ -101,7 +101,6 @@ Plug 'mileszs/ack.vim'
 
 Plug 'elixir-lang/vim-elixir'
 
-Plug 'vim-scripts/indentpython.vim'
 Plug 'nvie/vim-flake8'
 
 " Vim text objects for Ruby blocks

@@ -31,6 +31,9 @@ call plug#begin('~/.vim/bundle')
 Plug 'kchmck/vim-coffee-script'
 Plug 'ctrlpvim/ctrlp.vim'
 
+" Update ctags file on every save, including pruning of removed code
+Plug 'craigemery/vim-autotag'
+
 " Create directories as necessary when editing a new file
 Plug 'pbrisbin/vim-mkdir'
 

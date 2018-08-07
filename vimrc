@@ -184,6 +184,10 @@ map <Leader>vz :VimuxZoomRunner<CR>
 " Run commands that require an interactive shell
 nnoremap <Leader>r :RunInInteractiveShell<space>
 
+" Run undercover
+nmap <Leader>u :Tmux bundle exec undercover<CR>
+nmap <Leader>um :Tmux bundle exec undercover -c master<CR>
+
 " Treat <li> and <p> tags like the block tags they are
 let g:html_indent_tags = 'li\|p'
 

@@ -44,6 +44,7 @@ augroup vimrcEx
 
   " Set syntax highlighting for specific file types
   autocmd BufRead,BufNewFile Appraisals set filetype=ruby
+  autocmd BufRead,BufNewFile Fastfile set filetype=ruby
   autocmd BufRead,BufNewFile *.md set filetype=markdown
 
   " Enable spellchecking for Markdown
@@ -68,6 +69,10 @@ set expandtab
 
 " Display extra whitespace
 set list listchars=tab:»·,trail:·,nbsp:·
+
+" Shortcut to refer to the directory of the current file
+" From https://www.destroyallsoftware.com/file-navigation-in-vim.html
+cnoremap %% <C-R>=expand('%:h').'/'<cr>
 
 " Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
 if executable('ag')
@@ -152,8 +157,8 @@ let test#strategy = "tslime"
 let g:test#preserve_screen = 1
 
 let test#ruby#rspec#options = {
-  \ 'nearest': '--fail-fast',
-  \ 'file':    '--fail-fast',
+  \ 'nearest': '',
+  \ 'file':    '',
   \ 'suite':   '--fail-fast',
 \}
 
@@ -179,6 +184,10 @@ map <Leader>vz :VimuxZoomRunner<CR>
 " Run commands that require an interactive shell
 nnoremap <Leader>r :RunInInteractiveShell<space>
 
+" Run undercover
+nmap <Leader>u :Tmux bundle exec undercover<CR>
+nmap <Leader>um :Tmux bundle exec undercover -c master<CR>
+
 " Treat <li> and <p> tags like the block tags they are
 let g:html_indent_tags = 'li\|p'
 
@@ -197,24 +206,38 @@ let g:syntastic_check_on_open=1
 let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
 let g:syntastic_eruby_ruby_quiet_messages =
     \ {"regex": "possibly useless use of a variable in void context"}
+let g:syntastic_ruby_checkers = [ 'rubocop' ]
+
+" vim-ruby customisation
+
+
+" Highlight Ruby operators
+let ruby_operators = 1
+
+let ruby_indent_block_style = 'do'
+
+" vim-fold-rspec customisation
+
+let g:fold_rspec_foldlevel = 3       " sets initial open/closed state of all folds (open unless nested more than two levels deep)
+let g:fold_rspec_foldcolumn = 4      " shows a 4-character column on the lefthand side of the window displaying the document's fold structure
+let g:fold_rspec_foldminlines = 3    " disables closing of folds containing two lines or fewer
 
 " Set spellfile to location that is guaranteed to exist, can be symlinked to
 " Dropbox or kept in Git and managed outside of thoughtbot/dotfiles using rcm.
 set spellfile=$HOME/.vim-spell-en.utf-8.add
 
-" Autocomplete with dictionary words when spell check is on
-set complete+=kspell
-
 " Always use vertical diffs
 set diffopt+=vertical
-
-" Relative line numbering
-set relativenumber
 
 " Two settings to (potentially) aid in keeping the UI responsive, e.g. when
 " scrolling
 set ttyfast
 set lazyredraw
+
+" Use the old vim regex engine (version 1, as opposed to version 2, which was
+" introduced in Vim 7.3.969). The Ruby syntax highlighting is significantly
+" slower with the new regex engine.
+set re=1
 
 " Colour scheme
 let g:molokai_original=0
@@ -283,11 +306,25 @@ autocmd FileType ruby xmap <buffer> <leader>c <Plug>(seeing_is_believing-clean)
 autocmd FileType ruby nmap <buffer> <leader>r <Plug>(seeing_is_believing-run)
 autocmd FileType ruby xmap <buffer> <leader>r <Plug>(seeing_is_believing-run)
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" PROMOTE VARIABLE TO RSPEC LET
+" https://github.com/garybernhardt/dotfiles/blob/master/.vimrc#L202
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+function! PromoteToLet()
+  :normal! dd
+  " :exec '?^\s*it\>'
+  :normal! P
+  :.s/\(\w\+\) = \(.*\)$/let(:\1) { \2 }/
+  :normal ==
+endfunction
+:command! PromoteToLet :call PromoteToLet()
+:map <leader>p :PromoteToLet<cr><Paste>
+
 " Configure custom shortcuts for moving between git hunks
 nmap ]h <Plug>GitGutterNextHunk
 nmap [h <Plug>GitGutterPrevHunk
 
-let g:gitgutter_updatetime = 250
+set updatetime=100
 
 map y <Plug>(highlightedyank)
 

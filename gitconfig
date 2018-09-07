@@ -14,6 +14,8 @@
   co = checkout
   st = status
   po = "!git push -u origin \"$(git rev-parse --abbrev-ref HEAD)\""
+  dc = diff --cached
+  aa = add --all
 	ctags = !.git/hooks/ctags
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 [include]

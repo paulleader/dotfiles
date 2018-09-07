@@ -31,6 +31,9 @@ call plug#begin('~/.vim/bundle')
 Plug 'kchmck/vim-coffee-script'
 Plug 'ctrlpvim/ctrlp.vim'
 
+" Update ctags file on every save, including pruning of removed code
+Plug 'craigemery/vim-autotag'
+
 " Create directories as necessary when editing a new file
 Plug 'pbrisbin/vim-mkdir'
 
@@ -62,10 +65,7 @@ Plug 'mattn/emmet-vim'
 Plug 'tpope/vim-dispatch'
 Plug 'vim-ruby/vim-ruby'
 Plug 'mrkn/vim-cruby'
-Plug 'ecomba/vim-ruby-refactoring'
 Plug 'vim-scripts/tComment'
-
-Plug 'jiangmiao/auto-pairs' " Auto-complete closing brackets
 
 Plug 'airblade/vim-gitgutter'
 
@@ -102,13 +102,8 @@ Plug 'machakann/vim-highlightedyank'
 
 Plug 'mileszs/ack.vim'
 
-" Snippets
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
-
 Plug 'elixir-lang/vim-elixir'
 
-Plug 'vim-scripts/indentpython.vim'
 Plug 'nvie/vim-flake8'
 
 " Vim text objects for Ruby blocks

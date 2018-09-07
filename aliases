@@ -23,6 +23,7 @@ alias gs="git status"
 alias gb="git branch -vv --sort=committerdate"
 alias gbd="git branch -d"
 alias gd="git diff"
+alias gdc="git diff --cached"
 alias gco="git checkout"
 
 alias gfp="git fetch -p"
